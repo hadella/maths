@@ -95,7 +95,7 @@
 \[ lcm(u, v) = \frac{\left | {uv} \right |}{gcd(u, v)} = \left | u \right | \cdot \frac{\left | v \right |}{gcd(u, v)} \]</div>
 </p>
 <p>These formulas are also valid when exactly one of <em>u</em> and <em>v</em> is 0 since <span class="math notranslate nohighlight">\(gcd(u, 0) = \left | u \right |\)</span>.</p>
-<p>However, if both <em>u</em> and <em>v</em> are both 0, then these formulas would cause a division by 0. This creates a special case.</p>
+<p>However, if both <em>u</em> and <em>v</em> are both 0, then these formulas would cause a division by 0! This creates a special case:</p>
 <p><div class="math notranslate nohighlight">
 \[lcm(0, 0) = 0\]</div>
 </p>
@@ -116,8 +116,7 @@
 <dt class="sig sig-object cpp" id="_CPPv43gcdii">
 <span id="_CPPv33gcdii"></span><span id="_CPPv23gcdii"></span><span id="gcd__i.i"></span><span class="target" id="maths_8h_1a3a776262db534198734c87aa7af7ec4d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gcd</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv43gcdii" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Calculates the greatest common divisor between integers <em>u</em> and <em>v</em></p>
-<p>The greatest common divisor (<em>gcd</em>) of two nonzero integers <em>u</em> and <em>v</em> is the greatest positive integer <em>d</em> such that <em>d</em> is a divisor of both <em>u</em> and <em>v</em>; that is, there are integers <em>e</em> and <em>f</em> such that <span class="math notranslate nohighlight">\(u = de\)</span> and <span class="math notranslate nohighlight">\(v = df\)</span> and <em>d</em> is the largest such integer.</p>
-<p>The <em>gcd</em> of <em>u</em> and <em>v</em> is generally denoted <span class="math notranslate nohighlight">\(gcd(u, v)\)</span>.</p>
+<p>The greatest common divisor (<em>gcd</em>) of two non-zero integers <em>u</em> and <em>v</em> is the greatest positive integer <em>d</em> such that <em>d</em> is a divisor of both <em>u</em> and <em>v</em>; that is, there are integers <em>e</em> and <em>f</em> such that <span class="math notranslate nohighlight">\(u = de\)</span> and <span class="math notranslate nohighlight">\(v = df\)</span> where <em>d</em> is the largest such integer.</p>
 <p>This definition also applies when one of <em>u</em> and <em>v</em> is 0. In this case, the <em>gcd</em> the absolute value of the non-zero integer.</p>
 <p><div class="math notranslate nohighlight">
 \[gcd(u, 0) = gcd(0, u) = |u|\]</div>
@@ -138,7 +137,7 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv43nlmii">
 <span id="_CPPv33nlmii"></span><span id="_CPPv23nlmii"></span><span id="nlm__i.i"></span><span class="target" id="maths_8h_1aaeafcaa4572d6c5aafca79bad02c9df4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nlm</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv43nlmii" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Calculates the next integer &gt; <em>u</em> which is a multiple of <em>v</em></p>
+<dd><p>Calculates the next integer greater than <em>u</em> which is a multiple of <em>v</em></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -147,15 +146,15 @@
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the next integer &gt; <em>u</em> which is a multiple of <em>v</em></p>
+<dd class="field-even"><p>the next integer greater than <em>u</em> which is a multiple of <em>v</em></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv43trii">
-<span id="_CPPv33trii"></span><span id="_CPPv23trii"></span><span id="tri__i"></span><span class="target" id="maths_8h_1a3bf378dcad68bcd44a870c1ed3cc0ec7"></span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tri</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv43trii" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Calculates the “Triangle” number which is the sum of all positive integers from 1 to <em>n</em>. </p>
+<dt class="sig sig-object cpp" id="_CPPv43trij">
+<span id="_CPPv33trij"></span><span id="_CPPv23trij"></span><span id="tri__unsigned-i"></span><span class="target" id="maths_8h_1acf841a6a44894293a710323ef11104fd"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tri</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv43trij" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Calculates the <em>triangle</em> number which is the sum of all positive integers from 1 to <em>n</em>. </p>
 <p><div class="math notranslate nohighlight">
 \[tri(n) = \sum_{i=1}^{n}i = 1 + 2 + 3 + \cdots + n = \frac{n \cdot (n + 1)}{2}\]</div>
 </p>

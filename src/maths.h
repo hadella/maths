@@ -28,7 +28,7 @@ extern "C" {
  * \f$gcd(u, 0) = \left | u \right |\f$.
  * 
  * However, if both *u* and *v* are both 0, then these formulas would cause a 
- * division by 0. This creates a special case.
+ * division by 0! This creates a special case:
  * 
  * \f[lcm(0, 0) = 0\f]
  * 
@@ -41,12 +41,10 @@ int lcm(int u, int v);
 /**
  * \brief Calculates the greatest common divisor between integers *u* and *v*
  * 
- * The greatest common divisor (*gcd*) of two nonzero integers *u* and *v* is the 
+ * The greatest common divisor (*gcd*) of two non-zero integers *u* and *v* is the 
  * greatest positive integer *d* such that *d* is a divisor of both *u* and *v*;
  * that is, there are integers *e* and *f* such that \f$u = de\f$ and \f$v = df\f$
- * and *d* is the largest such integer.
- * 
- * The *gcd* of *u* and *v* is generally denoted \f$gcd(u, v)\f$.
+ * where *d* is the largest such integer.
  * 
  * This definition also applies when one of *u* and *v* is 0. In this case, the *gcd*
  * the absolute value of the non-zero integer.
@@ -60,16 +58,16 @@ int lcm(int u, int v);
 int gcd(int u, int v);
 
 /**
- * \brief Calculates the next integer > *u* which is a multiple of *v*
+ * \brief Calculates the next integer greater than *u* which is a multiple of *v*
  * 
  * \param u an integer
  * \param v an integer
- * \return the next integer > *u* which is a multiple of *v*
+ * \return the next integer greater than  *u* which is a multiple of *v*
  */
 int nlm(int u, int v);
 
 /**
- * \brief Calculates the "Triangle" number which is the sum of all positive integers
+ * \brief Calculates the *triangle* number which is the sum of all positive integers
  * from 1 to *n*.
  * 
  * \f[tri(n) = \sum_{i=1}^{n}i = 1 + 2 + 3 + \cdots + n  = \frac{n \cdot (n + 1)}{2}\f]
@@ -77,7 +75,7 @@ int nlm(int u, int v);
  * \param n an integer
  * \return the triangle number of *n*
  */
-long int tri(int n);
+unsigned long int tri(unsigned int n);
 
 #ifdef __cplusplus
 } 
