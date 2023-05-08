@@ -1,18 +1,14 @@
 find_package(Doxygen REQUIRED)
 find_package(Sphinx REQUIRED)
 
-# Find all the public headers
-# get_target_property(CAT_CUTIFIER_PUBLIC_HEADER_DIR
-# 	cat_cutifier INTERFACE_INCLUDE_DIRECTORIES)
-# file(GLOB_RECURSE 
-# 	CAT_CUTIFIER_PUBLIC_HEADERS 
-# 	${CAT_CUTIFIER_PUBLIC_HEADER_DIR}/*.hpp)
-
 set(DOXYGEN_INPUT_DIR ${PROJECT_SOURCE_DIR}/src)
 set(DOXYGEN_OUTPUT_DIR ${CMAKE_CURRENT_BINARY_DIR}/doxygen)
 set(DOXYGEN_INDEX_FILE ${DOXYGEN_OUTPUT_DIR}/xml/index.xml)
 set(DOXYFILE_IN ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in)
 set(DOXYFILE_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
+
+# Set the directory for generated output
+set(GENERATED_DOCS_DIR ${PROJECT_SOURCE_DIR}/docs)
 
 # Set the name for this project
 set(DOXYGEN_PROJECT_NAME "maths")
@@ -23,7 +19,6 @@ configure_file(${DOXYFILE_IN} ${DOXYFILE_OUT} @ONLY)
 file(MAKE_DIRECTORY ${DOXYGEN_OUTPUT_DIR})
 
 add_custom_command(OUTPUT ${DOXYGEN_INDEX_FILE}
-	# DEPENDS ${CAT_CUTIFIER_PUBLIC_HEADERS}
 	COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_OUT}
 	MAIN_DEPENDENCY ${DOXYFILE_OUT} ${DOXYFILE_IN}
 	COMMENT "Generating docs..."
@@ -52,13 +47,13 @@ add_custom_command(OUTPUT ${SPHINX_INDEX_FILE}
 		${CMAKE_CURRENT_SOURCE_DIR}/index.rst
 		${DOXYGEN_INDEX_FILE}
 	MAIN_DEPENDENCY ${SPHINX_SOURCE}/conf.py
-	COMMENT "Generating documentation with Sphinx...")
+	COMMENT "Generating documentation with Sphinx..."
+	COMMAND ${CMAKE_COMMAND} -E copy_directory
+	${SPHINX_BUILD}
+	${GENERATED_DOCS_DIR}
+)
 
 # Nice named target so we can run the job easily
 add_custom_target(Sphinx ALL DEPENDS ${SPHINX_INDEX_FILE})
 
-# Add an install target to install the docs
-include(GNUInstallDirs)
-install(DIRECTORY ${SPHINX_BUILD}
-	DESTINATION ${CMAKE_INSTALL_DOCDIR})
 

@@ -27,8 +27,7 @@ author = 'Justin Hadella'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['breathe'
-]
+extensions = ['breathe']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -53,7 +52,7 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 # Sets the location of the generated xml
-breathe_projects = {"maths": "../build/docs/doxygen/xml"}
+breathe_projects = {"maths": "../build/gendocs/doxygen/xml"}
 
 # Breathe configuration
 breathe_default_project = 'maths'

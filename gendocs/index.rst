@@ -8,10 +8,4 @@ Welcome to maths' documentation!
 
 :ref:`genindex`
 
-Docs
-====
-
-.. .. doxygenstruct:: cat
-..    :members:
-
 .. doxygenfile:: maths.h
