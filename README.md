@@ -1,6 +1,6 @@
 # maths
 
-[Documentaton](https://hadella.github.io/maths/)
+See the [Documentaton](https://hadella.github.io/maths/).
 
 ## Build Requirements
 
@@ -12,7 +12,7 @@ sudo apt update
 sudo apt install cmake doxygen
 ```
 
-Doxygen documentation is fine, but we can spruce up the styling using sphinx and breathe.
+Doxygen documentation is fine, but we can spruce up the styling using sphinx and breathe!
 
 ```
 pip install sphinx_rtd_theme
