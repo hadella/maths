@@ -14,6 +14,9 @@
 int
 lcm(int u, int v)
 {
+	u = abs(u);
+	v = abs(v);
+
 	return u * (v / gcd(u, v));
 }
 
@@ -21,6 +24,9 @@ int
 gcd(int u, int v)
 {
 	unsigned int tmp;
+
+	u = abs(u);
+	v = abs(v);
 
 	while (v != 0) {
 		tmp = u % v;
@@ -34,11 +40,14 @@ gcd(int u, int v)
 int
 nlm(int u, int v)
 {
+	u = abs(u);
+	v = abs(v);
+
 	return u + v - u % v;
 }
 
-long int
-tri(int n)
+unsigned long int
+tri(unsigned int n)
 {
 	return n * (n + 1) / 2;
 }
