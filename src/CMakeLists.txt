@@ -1,0 +1,1 @@
+add_library(maths "maths.c" "maths.h")
