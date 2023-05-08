@@ -52,7 +52,7 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 # Sets the location of the generated xml
-breathe_projects = {"maths": "../build/gendocs/doxygen/xml"}
+breathe_projects = {"maths": "../build/docsgen/doxygen/xml"}
 
 # Breathe configuration
 breathe_default_project = 'maths'
