@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to maths’ documentation! &mdash; maths  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            maths
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to maths’ documentation!</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">maths</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to maths’ documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-maths-documentation">
+<h1>Welcome to maths’ documentation!<a class="headerlink" href="#welcome-to-maths-documentation" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p>
+<p><dl class="simple">
+<dt><strong>Author</strong></dt><dd><p>Justin Hadella (<a class="reference external" href="mailto:justin&#46;hadella&#37;&#52;&#48;gmail&#46;com">justin<span>&#46;</span>hadella<span>&#64;</span>gmail<span>&#46;</span>com</a>) </p>
+</dd>
+<dt><strong>Version</strong></dt><dd><p>0.1 </p>
+</dd>
+<dt><strong>Date</strong></dt><dd><p>2023-05-08</p>
+</dd>
+<dt><strong>Copyright</strong></dt><dd><p>Copyright (c) 2023 Justin Hadella </p>
+</dd>
+</dl>
+</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv43lcmii">
+<span id="_CPPv33lcmii"></span><span id="_CPPv23lcmii"></span><span id="lcm__i.i"></span><span class="target" id="maths_8h_1a67144edfc7712711269323733a94bfba"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lcm</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv43lcmii" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Calculates the least common multiple between integers <em>u</em> and <em>v</em></p>
+<p>The least common multiple (<em>lcm</em>) of two positive numbers <em>u</em> and <em>v</em> is the smallest positive integer that is evenly divisble by both <em>u</em> and <em>v</em>.</p>
+<p><div class="math notranslate nohighlight">
+\[ lcm(u, v) = \frac{\left | {uv} \right |}{gcd(u, v)} = \left | u \right | \cdot \frac{\left | v \right |}{gcd(u, v)} \]</div>
+</p>
+<p>These formulas are also valid when exactly one of <em>u</em> and <em>v</em> is 0 since <span class="math notranslate nohighlight">\(gcd(u, 0) = \left | u \right |\)</span>.</p>
+<p>However, if both <em>u</em> and <em>v</em> are both 0, then these formulas would cause a division by 0. This creates a special case.</p>
+<p><div class="math notranslate nohighlight">
+\[lcm(0, 0) = 0\]</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> – an integer </p></li>
+<li><p><strong>v</strong> – an integer </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the least common multiple between <em>u</em> and <em>v</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv43gcdii">
+<span id="_CPPv33gcdii"></span><span id="_CPPv23gcdii"></span><span id="gcd__i.i"></span><span class="target" id="maths_8h_1a3a776262db534198734c87aa7af7ec4d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gcd</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv43gcdii" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Calculates the greatest common divisor between integers <em>u</em> and <em>v</em></p>
+<p>The greatest common divisor (<em>gcd</em>) of two nonzero integers <em>u</em> and <em>v</em> is the greatest positive integer <em>d</em> such that <em>d</em> is a divisor of both <em>u</em> and <em>v</em>; that is, there are integers <em>e</em> and <em>f</em> such that <span class="math notranslate nohighlight">\(u = de\)</span> and <span class="math notranslate nohighlight">\(v = df\)</span> and <em>d</em> is the largest such integer.</p>
+<p>The <em>gcd</em> of <em>u</em> and <em>v</em> is generally denoted <span class="math notranslate nohighlight">\(gcd(u, v)\)</span>.</p>
+<p>This definition also applies when one of <em>u</em> and <em>v</em> is 0. In this case, the <em>gcd</em> the absolute value of the non-zero integer.</p>
+<p><div class="math notranslate nohighlight">
+\[gcd(u, 0) = gcd(0, u) = |u|\]</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> – an integer </p></li>
+<li><p><strong>v</strong> – an integer </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>greatest common divisor between <em>u</em> and <em>v</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv43nlmii">
+<span id="_CPPv33nlmii"></span><span id="_CPPv23nlmii"></span><span id="nlm__i.i"></span><span class="target" id="maths_8h_1aaeafcaa4572d6c5aafca79bad02c9df4"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nlm</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv43nlmii" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Calculates the next integer &gt; <em>u</em> which is a multiple of <em>v</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> – an integer </p></li>
+<li><p><strong>v</strong> – an integer </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the next integer &gt; <em>u</em> which is a multiple of <em>v</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv43trii">
+<span id="_CPPv33trii"></span><span id="_CPPv23trii"></span><span id="tri__i"></span><span class="target" id="maths_8h_1a3bf378dcad68bcd44a870c1ed3cc0ec7"></span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tri</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv43trii" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Calculates the “Triangle” number which is the sum of all positive integers from 1 to <em>n</em>. </p>
+<p><div class="math notranslate nohighlight">
+\[tri(n) = \sum_{i=1}^{n}i = 1 + 2 + 3 + \cdots + n = \frac{n \cdot (n + 1)}{2}\]</div>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>n</strong> – an integer </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the triangle number of <em>n</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Justin Hadella.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
