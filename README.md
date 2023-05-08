@@ -1,5 +1,6 @@
 # maths
 
+[Documentaton](https://hadella.github.io/maths/)
 
 ## Build Requirements
 
