@@ -39,3 +39,5 @@ ctest
 
 See the [criterion docs](https://criterion.readthedocs.io/en/master/index.html).
 
+> This project demonstrates how to automatically generate nice looking C documentation using:
+> Doxygen, Sphinx, and Breathe.
