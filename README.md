@@ -18,3 +18,13 @@ Doxygen documentation is fine, but we can spruce up the styling using sphinx and
 pip install sphinx_rtd_theme
 pip install breathe
 ```
+
+The `tests/` folder uses the [criterion](https://github.com/Snaipe/Criterion) unit testing
+framework.
+
+```
+sudo apt update
+sudo apt install libcriterion-dev
+```
+
+See the [criterion](https://criterion.readthedocs.io/en/master/index.html) api docs.
