@@ -1,1 +1,4 @@
 build/
+
+docs/.doctrees/environment.pickle
+docs/.doctrees/index.doctree
