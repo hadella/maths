@@ -1,6 +1,6 @@
 # maths
 
-See the [Documentaton](https://hadella.github.io/maths/).
+See the [Documentaton](https://hadella.github.io/maths/)
 
 ## Build Requirements
 
@@ -27,4 +27,4 @@ sudo apt update
 sudo apt install libcriterion-dev
 ```
 
-See the [criterion](https://criterion.readthedocs.io/en/master/index.html) api docs.
+See the [criterion docs](https://criterion.readthedocs.io/en/master/index.html).
