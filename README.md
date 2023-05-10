@@ -19,12 +19,25 @@ pip install sphinx_rtd_theme
 pip install breathe
 ```
 
-The `tests/` folder uses the [criterion](https://github.com/Snaipe/Criterion) unit testing
+The `tests` folder uses the [criterion](https://github.com/Snaipe/Criterion) unit testing
 framework.
 
 ```
 sudo apt update
 sudo apt install libcriterion-dev
+```
+
+## Building
+
+Once we've installed all the build requirements, the actual building is easy. In this case, we
+make a `build` folder and perform an out-of-source build. The build script will automatically
+update any documentation in the `docs` folder if the documentation changes.
+
+```
+mkdir build
+cd build
+cmake ..
+make
 ```
 
 ## Unit Tests
