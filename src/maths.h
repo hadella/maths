@@ -34,6 +34,7 @@ extern "C" {
  * 
  * \param u an integer
  * \param v an integer
+ * 
  * \return the least common multiple between *u* and *v*
  */
 int lcm(int u, int v);
@@ -53,6 +54,7 @@ int lcm(int u, int v);
  * 
  * \param u an integer
  * \param v an integer
+ * 
  * \return greatest common divisor between *u* and *v*
  */
 int gcd(int u, int v);
@@ -60,11 +62,14 @@ int gcd(int u, int v);
 /**
  * \brief Calculates the next integer greater than *u* which is a multiple of *v*
  * 
+ * \pre *v* must be > 0
+ * 
  * \param u an integer
  * \param v an integer
+ * 
  * \return the next integer greater than  *u* which is a multiple of *v*
  */
-int nlm(int u, int v);
+unsigned int nlm(unsigned int u, unsigned int v);
 
 /**
  * \brief Calculates the *triangle* number which is the sum of all positive integers
@@ -73,6 +78,7 @@ int nlm(int u, int v);
  * \f[tri(n) = \sum_{i=1}^{n}i = 1 + 2 + 3 + \cdots + n  = \frac{n \cdot (n + 1)}{2}\f]
  *
  * \param n an integer
+ * 
  * \return the triangle number of *n*
  */
 unsigned long int tri(unsigned int n);

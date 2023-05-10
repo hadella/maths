@@ -17,13 +17,18 @@ lcm(int u, int v)
 	u = abs(u);
 	v = abs(v);
 
+	// Special case to prevent a divide by 0!
+	if (u == 0 && v == 0) {
+		return 0;
+	}
+	
 	return u * (v / gcd(u, v));
 }
 
 int
 gcd(int u, int v)
 {
-	unsigned int tmp;
+	int tmp;
 
 	u = abs(u);
 	v = abs(v);
@@ -37,12 +42,9 @@ gcd(int u, int v)
 	return u;
 }
 
-int
-nlm(int u, int v)
+unsigned int
+nlm(unsigned int u, unsigned int v)
 {
-	u = abs(u);
-	v = abs(v);
-
 	return u + v - u % v;
 }
 
