@@ -27,4 +27,15 @@ sudo apt update
 sudo apt install libcriterion-dev
 ```
 
+## Unit Tests
+
+Running the unit tests is simple.
+
+```
+ctest
+```
+
+## Errata
+
 See the [criterion docs](https://criterion.readthedocs.io/en/master/index.html).
+
