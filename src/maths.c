@@ -53,3 +53,29 @@ tri(unsigned int n)
 {
 	return n * (n + 1) / 2;
 }
+
+unsigned int
+rotate(unsigned int u, int n)
+{
+	unsigned int result, bits;
+
+	int range = 8 * sizeof(int);
+	if (n > 0) {
+		n = n % range;
+	} else {
+		n = -(-n % range);
+	}
+
+	if (n == 0) {
+		result = u;
+	} else if (n > 0) { // left rotate
+		bits = u >> (range - n);
+		result = u << n | bits;
+	} else {            // right rotate
+		n = -n;
+		bits = u << (range - n);
+		result = u >> n | bits;
+	}
+
+	return result;
+}

@@ -64,3 +64,23 @@ Test(maths_test, tri_test)
 	cr_expect(tri(2) == 3, "tri(2) should be 3");
 	cr_expect(tri(20) == 210, "tri(20) should be 210");
 }
+
+Test(maths_test, rotate_test)
+{
+	size_t range = 8 * sizeof(int);
+
+	unsigned int n = 1;
+	for (int i = 0; i < range; ++i) {
+		cr_expect(rotate(n, i) == 1 << i, "rotate(%d, %d) should be %d", n, i, 1 << i);
+		// printf("rotate(%u,%d) should be %u\n", n, i, 1 << i);
+	}
+
+	n = 1 << range - 1; // On 32-bit machine this is 0x80000000
+	for (int i = 0; i < range; ++i) {
+		cr_expect(rotate(n, -i) == 1 << range - 1 - i, "rotate(%u, %d) should be %u", n, -i, 1 << range - 1 - i);
+		// printf("rotate(%u, %d) = %u, should be %u\n", n, -i, rotate(n, -i), 1 << range - 1 - i);
+	}
+
+	cr_expect(rotate(0xDEADBEEF, 4) == 0xEADBEEFD, "rotate(0xDEADBEEF, 4) should be 0xEADBEEFD");
+	cr_expect(rotate(0xDEADBEEF, -8) == 0xEFDEADBE, "rotate(0xDEADBEEF, -8) should be 0xEFDEADBE");
+}

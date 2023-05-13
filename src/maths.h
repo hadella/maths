@@ -37,7 +37,8 @@ extern "C" {
  * 
  * \return the least common multiple between *u* and *v*
  */
-int lcm(int u, int v);
+int
+lcm(int u, int v);
 
 /**
  * \brief Calculates the greatest common divisor between integers *u* and *v*
@@ -57,7 +58,8 @@ int lcm(int u, int v);
  * 
  * \return greatest common divisor between *u* and *v*
  */
-int gcd(int u, int v);
+int
+gcd(int u, int v);
 
 /**
  * \brief Calculates the next integer greater than *u* which is a multiple of *v*
@@ -69,7 +71,8 @@ int gcd(int u, int v);
  * 
  * \return the next integer greater than  *u* which is a multiple of *v*
  */
-unsigned int nlm(unsigned int u, unsigned int v);
+unsigned int
+nlm(unsigned int u, unsigned int v);
 
 /**
  * \brief Calculates the *triangle* number which is the sum of all positive integers
@@ -81,7 +84,33 @@ unsigned int nlm(unsigned int u, unsigned int v);
  * 
  * \return the triangle number of *n*
  */
-unsigned long int tri(unsigned int n);
+unsigned long int
+tri(unsigned int n);
+
+/**
+ * \brief Calculates a number rotated to the right or left by *n* bits
+ * 
+ * This function executes something similar to the C shifting operators `>>` and `<<` except
+ * when bits shifted left would rotate out, those high-order bits would be shifted back into
+ * the low-order bits.
+ * 
+ * For example:
+ * - `rotate(1, 2) == 4`
+ * - `rotate(8, -3) == 1`
+ * - `rotate(0xDEADBEEF, 4) == 0xEADBEEFD`
+ * - `rotate(0xDEADBEEF, -8) == 0xEFDEADBE`
+ * 
+ * \note
+ * The rotation bounds scale to the size of ints so this should be portable across different
+ * types of systems.
+ * 
+ * \param u the number to rotate
+ * \param n the number of bits to rotate (can be negative)
+ * 
+ * \return the result of rotating *u* by *n* bits
+ */
+unsigned int
+rotate(unsigned int u, int n);
 
 #ifdef __cplusplus
 } 
