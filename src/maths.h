@@ -92,13 +92,13 @@ tri(unsigned int n);
  * 
  * This function executes something similar to the C shifting operators `>>` and `<<` except
  * when bits shifted left would rotate out, those high-order bits would be shifted back into
- * the low-order bits.
+ * the low-order bits, and vice versa.
  * 
  * For example:
- * - `rotate(1, 2) == 4`
- * - `rotate(8, -3) == 1`
- * - `rotate(0xDEADBEEF, 4) == 0xEADBEEFD`
- * - `rotate(0xDEADBEEF, -8) == 0xEFDEADBE`
+ * - *rotate(1, 2) = 4*
+ * - *rotate(8, -3) = 1*
+ * - *rotate(0xDEADBEEF, 4) = 0xEADBEEFD*
+ * - *rotate(0xDEADBEEF, -8) = 0xEFDEADBE*
  * 
  * \note
  * The rotation bounds scale to the size of ints so this should be portable across different
