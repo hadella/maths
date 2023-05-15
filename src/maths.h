@@ -94,7 +94,7 @@ tri(unsigned int n);
  * when bits shifted left would rotate out, those high-order bits would be shifted back into
  * the low-order bits, and vice versa.
  * 
- * For example:
+ * Examples:
  * - *rotate*(1, 2) = 4
  * - *rotate*(8, -3) = 1
  * - *rotate*(0xDEADBEEF, 4) = 0xEADBEEFD
